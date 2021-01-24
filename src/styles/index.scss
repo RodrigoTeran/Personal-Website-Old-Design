@@ -1,5 +1,6 @@
 @import "./utils/mixins";
 @import "./buttons/socialMediaButtons";
+@import "./buttons/indexPageButtons";
 @import "./layout";
 @import "./footer";
 @import "./pages/indexPage";
@@ -7,6 +8,12 @@
   --color-icons-layout: #202020;
   --background-color-body: #1d1d1d;
   --text-color-body: #fff;
+  --text-color-body-2: #000;
+  --text-selection: #43f7d5;
+}
+::selection {
+  background-color: var(--text-selection);
+  color: var(--text-color-body);
 }
 html {
   min-height: 100%;
