@@ -7,6 +7,7 @@
   transition: background-color ease-in-out 0.5s, color ease-in-out 0.5s;
   font-size: 1.2rem;
   width: 200px;
+  z-index: 0;
   &.blank,
   &.gradient {
     &::after {
