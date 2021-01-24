@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import ReactTypingEffect from "react-typing-effect";
 
 // Components
 import IndexPageButton from "../components/Buttons/IndexPageButton";
@@ -22,9 +23,16 @@ const IndexPage = () => {
             Terán
           </h1>
           <h2>
-            Desarrollador de Aplicaciones
-            <br />
-            Web
+            <ReactTypingEffect
+              text={[
+                "Desarrollador de Aplicaciones Web",
+                "Entusiasta de la Tecnología",
+                "Amante de los libros",
+              ]}
+              eraseSpeed={50}
+              speed={80}
+              typingDelay={600}
+            ></ReactTypingEffect>
           </h2>
           <div>
             <IndexPageButton

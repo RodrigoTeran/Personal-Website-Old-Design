@@ -4,12 +4,12 @@
   border-radius: 50px;
   padding: 15px 50px 15px 50px;
   position: relative;
-  transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+  transition: background-color ease-in-out 0.5s, color ease-in-out 0.5s;
   font-size: 1.2rem;
   &.blank,
   &.gradient {
     &::after {
-      transition: opacity ease-in-out 0.3s;
+      transition: opacity ease-in-out 0.5s;
       content: "";
       position: absolute;
       z-index: -1;
