@@ -3,6 +3,15 @@
     width: 50%;
     @include flex-center();
     flex-direction: column;
+    &-div {
+      &-letter,
+      &-sentence {
+        margin: 0;
+        padding: 0;
+        @include flex-center();
+        cursor: default;
+      }
+    }
     &-container {
       padding-bottom: 50px;
       padding-right: 20px;
@@ -11,6 +20,8 @@
     h1 {
       font-size: 4.5rem;
       transition: font-size ease-in-out 0.3s;
+      @include flex-center($justify: flex-start, $align: flex-start);
+      flex-direction: column;
     }
     h2 {
       font-size: 1.2rem;
