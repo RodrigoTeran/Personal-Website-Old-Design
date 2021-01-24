@@ -1,0 +1,33 @@
+@import "./utils/mixins";
+@import "./buttons/socialMediaButtons";
+@import "./layout";
+@import "./footer";
+@import "./pages/indexPage";
+:root {
+  --color-icons-layout: #202020;
+  --background-color-body: #1d1d1d;
+  --text-color-body: #fff;
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--background-color-body);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: var(--text-color-body);
+}
+input,
+button {
+  outline: none;
+  border-style: none;
+}
