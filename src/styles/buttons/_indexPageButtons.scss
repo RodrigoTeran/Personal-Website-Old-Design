@@ -6,6 +6,7 @@
   position: relative;
   transition: background-color ease-in-out 0.5s, color ease-in-out 0.5s;
   font-size: 1.2rem;
+  width: 200px;
   &.blank,
   &.gradient {
     &::after {
@@ -49,6 +50,13 @@
           opacity: 1;
         }
       }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    &.blank {
+      margin-left: 0px;
+      margin-top: 20px;
     }
   }
 }

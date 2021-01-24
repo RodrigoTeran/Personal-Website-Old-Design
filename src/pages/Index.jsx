@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import ReactTypingEffect from "react-typing-effect";
 
 // Components
-import IndexPageButton from "../components/Buttons/IndexPageButton";
+import LeftSide from "../components/IndexPage/LeftSide";
+import RightSide from "../components/IndexPage/RightSide";
 
 const IndexPage = () => {
   return (
@@ -15,38 +15,9 @@ const IndexPage = () => {
           content="Portafolio personal - Rodrigo Terán Hernández. Página de inicio."
         />
       </Helmet>
-      <main>
-        <div className="index-page-left-side">
-          <h1>
-            Soy Rodrigo
-            <br />
-            Terán
-          </h1>
-          <h2>
-            <ReactTypingEffect
-              text={[
-                "Desarrollador de Aplicaciones Web",
-                "Entusiasta de la Tecnología",
-                "Amante de los libros",
-              ]}
-              eraseSpeed={50}
-              speed={80}
-              typingDelay={600}
-            ></ReactTypingEffect>
-          </h2>
-          <div>
-            <IndexPageButton
-              onClickFunction={() => {}}
-              text="Contáctame"
-              type="gradient"
-            ></IndexPageButton>
-            <IndexPageButton
-              onClickFunction={() => {}}
-              text="Portafolio"
-              type="noGradient"
-            ></IndexPageButton>
-          </div>
-        </div>
+      <main className="pages-container-index">
+        <LeftSide></LeftSide>
+        <RightSide></RightSide>
       </main>
     </>
   );
