@@ -1,9 +1,15 @@
+// Utils
 @import "./utils/mixins";
 @import "./buttons/socialMediaButtons";
 @import "./buttons/indexPageButtons";
+
+// Layout
 @import "./layout";
 @import "./footer";
-@import "./pages/indexPage";
+
+// Pages
+@import "./pages/IndexPage/indexIndexPage";
+
 :root {
   --color-icons-layout: #202020;
   --background-color-body: #1d1d1d;
@@ -25,7 +31,7 @@ body {
   padding: 0px;
   background-color: var(--background-color-body);
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: relative;
   top: 0px;
   left: 0px;

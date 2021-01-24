@@ -17,6 +17,7 @@ const App = () => {
   return (
     <>
       <Layout></Layout>
+      <Footer></Footer>
       <Router>
         <Switch>
           <Route exact path="/" component={IndexPage} />
@@ -25,7 +26,6 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-      <Footer></Footer>
     </>
   );
 };

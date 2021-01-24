@@ -1,0 +1,9 @@
+@import "./indexPageRightSide";
+@import "./indexPageLeftSide";
+.index-page {
+  display: flex;
+  min-height: calc(100vh - 65px);
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+}

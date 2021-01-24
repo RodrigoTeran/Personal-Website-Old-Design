@@ -15,7 +15,7 @@ const IndexPage = () => {
           content="Portafolio personal - Rodrigo Terán Hernández. Página de inicio."
         />
       </Helmet>
-      <main className="pages-container-index">
+      <main className="index-page">
         <LeftSide></LeftSide>
         <RightSide></RightSide>
       </main>
