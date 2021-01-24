@@ -24,7 +24,7 @@ const buttonsContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.1,
+      delay: 0.3,
       staggerChildren: 0.3,
       when: "beforeChildren",
     },
@@ -64,6 +64,7 @@ const LeftSide = () => {
                   className="index-page-left-side-div-letter"
                   variants={letterVariants}
                   key={`${char}-${index}`}
+                  whileHover={{ y: -30 }}
                 >
                   {char}
                 </motion.div>
@@ -77,7 +78,7 @@ const LeftSide = () => {
                   className="index-page-left-side-div-letter"
                   variants={letterVariants}
                   key={`${char}-${index}`}
-                  // whileHover="whileHover"
+                  whileHover={{ y: -30 }}
                 >
                   {char}
                 </motion.div>

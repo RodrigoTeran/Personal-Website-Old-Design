@@ -9,8 +9,8 @@ const RightSide = () => {
           <img
             src={`${
               isWebpSupported
-                ? "./Images/contact-page-me.webp"
-                : "./Images/contact-page-me.jpg"
+                ? "/Images/contact-page-me.webp"
+                : "/Images/contact-page-me.jpg"
             }`}
             alt="Rodrigo Terán"
           />
