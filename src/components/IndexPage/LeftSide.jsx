@@ -49,7 +49,11 @@ const LeftSide = () => {
             })}
           </div>
         </motion.h1>
-        <h2>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
           <ReactTypingEffect
             text={[
               "Desarrollador de Aplicaciones Web",
@@ -60,7 +64,7 @@ const LeftSide = () => {
             speed={80}
             typingDelay={600}
           ></ReactTypingEffect>
-        </h2>
+        </motion.h2>
         <motion.div
           className="index-page-left-side-buttons-container"
           variants={buttonsContainerVariants}

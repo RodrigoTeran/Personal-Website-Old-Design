@@ -39,3 +39,38 @@ export const letterVariants = {
     transition: { type: "spring", stiffness: 200 },
   },
 };
+
+export const independentDivTextVariants = {
+  hidden: {
+    opacity: 1,
+    y: 0,
+  },
+  visible: {
+    opacity: 1,
+    y: -10,
+    transition: { type: "spring", stiffness: 200 },
+  },
+  tap: {
+    opacity: 1,
+    y: -1,
+    transition: { type: "spring", stiffness: 200 },
+  },
+};
+
+export const independentDivIconVariants = {
+  hidden: {
+    opacity: 0,
+    y: -10,
+    scale: 0,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 200 },
+  },
+  tap: {
+    y: -5,
+    transition: { type: "spring", stiffness: 200 },
+  },
+};
