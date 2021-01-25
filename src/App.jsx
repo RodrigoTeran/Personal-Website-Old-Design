@@ -1,31 +1,30 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import React from "react";
+import { AnimatePresence } from "framer-motion";
 
 // Pages
 import IndexPage from "./pages/Index";
+import AboutPage from "./pages/About";
 
 // Components
 import Footer from "./components/Footer";
 import Layout from "./components/Layout";
 
 const App = () => {
+  const location = useLocation();
   return (
     <>
       <Layout></Layout>
       <Footer></Footer>
-      <Router>
-        <Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
           <Route exact path="/" component={IndexPage} />
+          <Route exact path="/acerca-de" component={AboutPage} />
           <Route path="/">
             <Redirect to="/"></Redirect>
           </Route>
         </Switch>
-      </Router>
+      </AnimatePresence>
     </>
   );
 };

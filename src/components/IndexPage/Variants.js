@@ -10,6 +10,11 @@ export const sentenceVariants = {
       when: "beforeChildren",
     },
   },
+  exit: {
+    scale: 0.8,
+    opacity: 0,
+    transition: { type: "tween" },
+  },
 };
 
 export const buttonsContainerVariants = {
@@ -23,6 +28,11 @@ export const buttonsContainerVariants = {
       staggerChildren: 0.3,
       when: "beforeChildren",
     },
+  },
+  exit: {
+    scale: 0.8,
+    opacity: 0,
+    transition: { type: "tween", delay: 0.2 },
   },
 };
 

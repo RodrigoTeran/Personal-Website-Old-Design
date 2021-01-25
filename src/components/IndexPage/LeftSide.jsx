@@ -18,6 +18,7 @@ const LeftSide = () => {
           initial="hidden"
           animate="visible"
           variants={sentenceVariants}
+          exit="exit"
         >
           <div className="index-page-left-side-div-sentence">
             {h1Text1.split("").map((char, index) => {
@@ -53,6 +54,11 @@ const LeftSide = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
+          exit={{
+            scale: 0.8,
+            opacity: 0,
+            transition: { type: "tween", delay: .1 },
+          }}
         >
           <ReactTypingEffect
             text={[
@@ -70,6 +76,7 @@ const LeftSide = () => {
           variants={buttonsContainerVariants}
           initial="hidden"
           animate="visible"
+          exit="exit"
         >
           <IndexPageButton
             onClickFunction={() => {}}

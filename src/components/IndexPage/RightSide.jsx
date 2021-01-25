@@ -1,5 +1,6 @@
 import React from "react";
 import { isWebpSupported } from "react-image-webp/dist/utils";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   independentDivIconVariants,
@@ -12,6 +13,11 @@ const RightSide = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 1 }}
+      exit={{
+        sacle: .8,
+        opacity: 0,
+        transition: { type: "tween", delay: .3 },
+      }}
       className="index-page-right-side"
     >
       <div className="index-page-right-side-container">
@@ -63,7 +69,7 @@ const RightSide = () => {
           initial="hidden"
         >
           <motion.div variants={independentDivTextVariants}>
-            Acerca de
+            <Link to="/acerca-de">Acerca de</Link>
           </motion.div>
           <motion.div variants={independentDivIconVariants}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">

@@ -4,13 +4,14 @@ import { buttonSocialMediaVariants } from "./Variants";
 
 const SocialMediaButton = ({ onClickFunction, children }) => {
   return (
-    <motion.button
+    <motion.a
       variants={buttonSocialMediaVariants}
       className="social-media-button"
-      onClick={onClickFunction}
+      href={onClickFunction}
+      target="blank"
     >
       {children}
-    </motion.button>
+    </motion.a>
   );
 };
 export default SocialMediaButton;

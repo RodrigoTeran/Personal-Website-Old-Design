@@ -6,9 +6,11 @@
 // Layout
 @import "./layout";
 @import "./footer";
+@import "./pages/headerPages";
 
 // Pages
 @import "./pages/IndexPage/indexIndexPage";
+@import "./pages/AboutPage/indexAboutPage";
 
 :root {
   --color-icons-layout: #202020;
