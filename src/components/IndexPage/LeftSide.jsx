@@ -2,48 +2,11 @@ import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import IndexPageButton from "../Buttons/IndexPageButton";
 import { motion } from "framer-motion";
-
-const sentenceVariants = {
-  hidden: {
-    opacity: 1,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.1,
-      staggerChildren: 0.1,
-      when: "beforeChildren",
-    },
-  },
-};
-
-const buttonsContainerVariants = {
-  hidden: {
-    opacity: 1,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.3,
-      staggerChildren: 0.3,
-      when: "beforeChildren",
-    },
-  },
-};
-
-const letterVariants = {
-  hidden: {
-    scaleY: 0,
-    originY: "100%",
-    color: "#43f7d5",
-  },
-  visible: {
-    scaleY: 1,
-    originY: "100%",
-    color: "#fff",
-    transition: { type: "spring", stiffness: 200 },
-  },
-};
+import {
+  sentenceVariants,
+  buttonsContainerVariants,
+  letterVariants,
+} from "./Variants";
 
 const LeftSide = () => {
   const h1Text1 = "Soy Rodrigo";

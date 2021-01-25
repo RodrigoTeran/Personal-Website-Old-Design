@@ -1,10 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { buttonSocialMediaVariants } from "./Variants";
 
 const SocialMediaButton = ({ onClickFunction, children }) => {
   return (
-    <button className="social-media-button" onClick={onClickFunction}>
+    <motion.button
+      variants={buttonSocialMediaVariants}
+      className="social-media-button"
+      onClick={onClickFunction}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 };
 export default SocialMediaButton;
