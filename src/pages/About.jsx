@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import HeaderPages from "../components/HeaderPages";
+import RightSide from "../components/AboutPage/RightSide";
+import LeftSide from "../components/AboutPage/LeftSide";
 
 const About = () => {
   return (
@@ -14,6 +16,10 @@ const About = () => {
       </Helmet>
       <main className="about-page">
         <HeaderPages></HeaderPages>
+        <div className="about-page-container">
+          <LeftSide></LeftSide>
+          <RightSide></RightSide>
+        </div>
       </main>
     </>
   );

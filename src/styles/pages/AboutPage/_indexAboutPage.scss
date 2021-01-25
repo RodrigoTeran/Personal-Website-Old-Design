@@ -1,7 +1,17 @@
+@import "./aboutPageLeftSide";
+@import "./aboutPageRightSide";
+@import "./cardsAboutPageRightSide";
+
 .about-page {
   display: flex;
+  flex-direction: column;
+  width: 100%;
   min-height: calc(100vh - 65px);
-  // @media screen and (max-width: 1000px) {
-  //   flex-direction: column;
-  // }
+  &-container{
+    display: flex;
+    @media screen and (max-width: 1000px){
+      @include flex-center($align: center, $justify: flex-start);
+      flex-direction: column-reverse;
+    }
+  }
 }

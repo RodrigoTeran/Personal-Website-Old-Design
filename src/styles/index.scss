@@ -18,6 +18,8 @@
   --text-color-body: #fff;
   --text-color-body-2: #000;
   --text-selection: #43f7d5;
+  --simulating-text-cards-about-page: rgb(56, 56, 56);
+  --simulating-background-cards-about-page: rgb(39, 39, 39);
 }
 ::selection {
   background-color: var(--text-selection);
@@ -25,6 +27,7 @@
 }
 html {
   min-height: 100%;
+  width: 100vw;
   position: relative;
 }
 body {
@@ -40,6 +43,7 @@ body {
   font-size: 16px;
   font-family: sans-serif;
   color: var(--text-color-body);
+  overflow-x: hidden;
 }
 input,
 button {

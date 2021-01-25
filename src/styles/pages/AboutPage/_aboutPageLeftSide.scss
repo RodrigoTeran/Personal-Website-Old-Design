@@ -1,0 +1,19 @@
+.about-page-left-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 3rem;
+    margin-left: 150px;
+  }
+  &-particles-container {
+    padding: 35px;
+    height: 100%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    &-particles-container {
+      height: 500px;
+    }
+  }
+}

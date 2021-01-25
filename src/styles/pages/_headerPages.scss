@@ -1,5 +1,5 @@
 .pages-header {
-  width: 100%;
+  width: calc(100% - 30px);
   @include flex-center($justify: flex-start);
   height: fit-content;
   padding-left: 30px;
