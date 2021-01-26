@@ -1,21 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CardRightSide from "./CardRightSide";
 
 const RightSide = () => {
-  const [widthPage, setWidthPage] = useState(0);
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  const handleResize = () => {
-    setWidthPage(window.innerWidth);
-  };
   return (
     <div className="about-page-right-side">
-      {widthPage <= 1000 ? <h1>Acerca de</h1> : null}
       <p>
         Soy un apasionado por la tecnología. En especial la{" "}
         <span>Inteligencia Artificial</span>{" "}

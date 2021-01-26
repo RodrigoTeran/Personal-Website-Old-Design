@@ -7,12 +7,33 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: calc(100vh - 65px);
-  &-container{
+  &-container {
     display: flex;
-    @media screen and (max-width: 1000px){
+    height: fit-content;
+    @media screen and (max-width: 1000px) {
       @include flex-center($align: center, $justify: flex-start);
       flex-direction: column-reverse;
     }
+  }
+}
+.h1-about-page {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 150px;
+  @include flex-center($justify: flex-start);
+  text-align: center;
+  width: calc(100% - 150px);
+  cursor: default;
+  &-letter {
+    margin: 0;
+    padding: 0;
+    @include flex-center();
+    cursor: default;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    padding-left: 0;
+    justify-content: center;
   }
 }
