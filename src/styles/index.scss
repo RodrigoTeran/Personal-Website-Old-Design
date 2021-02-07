@@ -11,21 +11,22 @@
 // Pages
 @import "./pages/IndexPage/indexIndexPage";
 @import "./pages/AboutPage/indexAboutPage";
+@import "./pages/WorkPage/indexWorkPage";
 
 :root {
   --color-icons-layout: #202020;
+  --border-works: rgb(42, 42, 42);
+  --background-color-works: rgb(20, 20, 20);
   --background-color-body: #1d1d1d;
   --text-color-body: #fff;
   --text-color-body-2: #000;
   --text-selection: #43f7d5;
-  --simulating-text-cards-about-page: rgb(56, 56, 56);
-  --simulating-background-cards-about-page: rgb(39, 39, 39);
 }
 ::-webkit-scrollbar {
-  width: 1em;
+  width: .3em;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(100, 100, 100, 1);
+  background-color:rgba(100, 100, 100, 1);
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       background-color: rgba(80, 80, 80, 1);

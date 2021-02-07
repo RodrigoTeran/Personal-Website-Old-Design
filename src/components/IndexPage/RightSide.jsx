@@ -53,7 +53,7 @@ const RightSide = () => {
           />
         </div>
         <IndependentDiv text="Estudios" link="/acerca-de" number="2" />
-        <IndependentDiv text="Trabajo" link="/acerca-de" number="3" />
+        <IndependentDiv text="Trabajo" link="/trabajo" number="3" />
         <IndependentDiv text="Acerca de" link="/acerca-de" number="4" />
         <IndependentDiv text="Habilidades" link="/acerca-de" number="5" />
       </div>

@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 // Pages
 import IndexPage from "./pages/Index";
 import AboutPage from "./pages/About";
+import Work from "./pages/Work";
 
 // Components
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ const App = () => {
         <Switch location={location} key={location.key}>
           <Route exact path="/" component={IndexPage} />
           <Route exact path="/acerca-de" component={AboutPage} />
+          <Route exact path="/trabajo" component={Work} />
           <Route path="/">
             <Redirect to="/"></Redirect>
           </Route>

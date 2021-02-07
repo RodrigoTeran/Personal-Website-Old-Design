@@ -1,0 +1,47 @@
+.about-page-bottom-card {
+  width: 300px;
+  padding: 30px;
+  position: relative;
+  background-color: transparent;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  &:nth-child(2) {
+    grid-area: a;
+  }
+  &:nth-child(3) {
+    grid-area: b;
+  }
+  &:nth-child(4) {
+    grid-area: c;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &::before {
+    z-index: -1;
+    background-color: var(--color-icons-layout);
+    filter: blur(2px);
+  }
+  &::after {
+    z-index: -2;
+    background-color: transparent;
+    border: 1px solid var(--text-selection);
+    transform: translateY(20px) translateX(20px);
+  }
+  div {
+    &:nth-child(1) {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    &:last-child {
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+  }
+}

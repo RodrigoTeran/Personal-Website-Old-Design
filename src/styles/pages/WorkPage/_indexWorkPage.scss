@@ -1,0 +1,11 @@
+@import "./webApps";
+@import "./webApp";
+
+.work-page {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  &-container {
+    height: fit-content;
+  }
+}
