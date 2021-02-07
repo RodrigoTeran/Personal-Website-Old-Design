@@ -1,19 +1,11 @@
-@import "./aboutPageLeftSide";
-@import "./aboutPageRightSide";
-@import "./cardsAboutPageRightSide";
-@import "./cardsAnimationAboutPageRightSide";
+@import "./aboutPageBottom";
+@import "./aboutPageTop";
+@import "./cardsAboutPageBottom";
 
 .about-page {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   &-container {
-    display: flex;
     height: fit-content;
-    @media screen and (max-width: 1000px) {
-      @include flex-center($align: center, $justify: flex-start);
-      flex-direction: column-reverse;
-    }
   }
 }
 .h1-about-page {

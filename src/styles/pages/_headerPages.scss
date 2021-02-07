@@ -2,6 +2,7 @@
   width: calc(100% - 30px);
   @include flex-center($justify: flex-start);
   height: fit-content;
+  
   padding-left: 30px;
   font-size: 2rem;
   transition: padding-left ease-in-out .3s;

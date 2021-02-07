@@ -1,34 +1,61 @@
-export const cardVariants = {
+export const topContainerVariants = {
   hidden: {
-    y: 0,
-    transition: {
-      duration: 1,
-      type: "tween",
-    },
+    opacity: 1,
   },
   visible: {
-    y: 150,
-    transition: {
-      duration: 1,
-      type: "tween",
-    },
-  },
-};
-export const cardAnimTextVariants = {
-  visible: {
-    y: 0,
-    opacity: 0,
-    transition: {
-      duration: 1,
-      type: "tween",
-    },
-  },
-  hidden: {
-    y: 150,
     opacity: 1,
     transition: {
-      duration: 1,
-      type: "tween",
+      delay: 0.1,
+      staggerChildren: 0.1,
+      when: "beforeChildren",
     },
+  },
+  exit: {
+    x: -50,
+    opacity: 0,
+    transition: { type: "tween" },
+  },
+};
+
+export const topPVariants = {
+  hidden: {
+    x: -50,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 200 },
+  },
+};
+
+export const bottomContainerVariants = {
+  hidden: {
+    opacity: 1,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.1,
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+    },
+  },
+  exit: {
+    scale: 0,
+    opacity: 0,
+    transition: { type: "tween" },
+  },
+};
+
+export const bottomCardVariants = {
+  hidden: {
+    y: 50,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 200 },
   },
 };

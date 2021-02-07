@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import HeaderPages from "../components/HeaderPages";
-import RightSide from "../components/AboutPage/RightSide";
-import LeftSide from "../components/AboutPage/LeftSide";
+import Top from "../components/AboutPage/Top";
+import Bottom from "../components/AboutPage/Bottom";
 
 import { motion } from "framer-motion";
 import {
@@ -46,8 +46,8 @@ const About = () => {
           </div>
         </motion.h1>
         <div className="about-page-container">
-          <LeftSide></LeftSide>
-          <RightSide></RightSide>
+          <Top></Top>
+          <Bottom></Bottom>
         </div>
       </main>
     </>
