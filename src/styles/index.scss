@@ -21,23 +21,28 @@
   --text-color-body: #fff;
   --text-color-body-2: #000;
   --text-selection: #43f7d5;
+  --linear-gradient-darker: rgba(58, 54, 242, 1);
+
+  --webkit-scrollbar-thumb-background-color: rgba(100, 100, 100, 1);
+  --webkit-scrollbar-thumb-background-color-hover: rgba(80, 80, 80, 1);
+  --webkit-scrollbar-thumb-background-color-active: rgba(60, 60, 60, 1);
 }
 ::-webkit-scrollbar {
-  width: .3em;
+  width: 0.3em;
 }
 ::-webkit-scrollbar-thumb {
-  background-color:rgba(100, 100, 100, 1);
+  background-color: var(--webkit-scrollbar-thumb-background-color);
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: rgba(80, 80, 80, 1);
+      background-color: var(--webkit-scrollbar-thumb-background-color-hover);
     }
     &:active {
-      background-color: rgba(60, 60, 60, 1);
+      background-color: var(--webkit-scrollbar-thumb-background-color-active);
     }
   }
 }
 ::-webkit-scrollbar-track-piece {
-  background-color: rgba(25, 25, 25, 1);
+  background-color: var(--background-color-body);
 }
 ::selection {
   background-color: var(--text-selection);

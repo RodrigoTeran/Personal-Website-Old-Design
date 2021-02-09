@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import HeaderPages from "../components/HeaderPages";
 import { motion } from "framer-motion";
@@ -11,6 +11,13 @@ import WebApps from "../components/WorkPage/WebApps";
 
 const Work = () => {
   const h1Text1 = "Trabajo";
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Helmet>

@@ -6,15 +6,12 @@ const CardBottom = ({ title, text }) => {
   return (
     <motion.div
       variants={bottomCardVariants}
-      whileHover={{
-        scale: 1.1,
-        transition: { type: "spring", stiffness: 200 },
-        rotateZ: 2,
-      }}
       className="about-page-bottom-card"
     >
-      <div>{title}</div>
-      <div>{text}</div>
+      <div className="about-page-bottom-card-container">
+        <div>{title}</div>
+        <div>{text}</div>
+      </div>
     </motion.div>
   );
 };

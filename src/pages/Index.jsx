@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 // Components
@@ -6,6 +6,13 @@ import LeftSide from "../components/IndexPage/LeftSide";
 import RightSide from "../components/IndexPage/RightSide";
 
 const IndexPage = () => {
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <>
       <Helmet>

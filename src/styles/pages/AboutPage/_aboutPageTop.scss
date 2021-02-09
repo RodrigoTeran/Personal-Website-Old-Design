@@ -1,13 +1,10 @@
 .about-page-top {
   width: calc(100% - 200px);
   padding: 0px 100px 0px 100px;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-top: 40px;
   span {
     color: var(--text-selection);
-  }
-  p:nth-child(1) {
-    font-size: 1.5rem;
   }
   @media screen and (max-width: 600px) {
     width: calc(100% - 50px);

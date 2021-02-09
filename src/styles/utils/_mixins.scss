@@ -3,3 +3,6 @@
   justify-content: $justify;
   align-items: $align;
 }
+@mixin gradient-background-1() {
+  background: linear-gradient(90deg, var(--text-selection) 0%, var(--linear-gradient-darker) 100%);
+}

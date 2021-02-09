@@ -1,6 +1,6 @@
-@import "./aboutPageBottom";
 @import "./aboutPageTop";
 @import "./cardsAboutPageBottom";
+@import "./aboutPageBottom";
 
 .about-page {
   width: 100%;
@@ -14,10 +14,10 @@
   font-size: 3rem;
   margin: 0;
   padding: 0;
-  padding-left: 150px;
+  padding-left: 100px;
   @include flex-center($justify: flex-start);
   text-align: center;
-  width: calc(100% - 150px);
+  width: calc(100% - 100px);
   cursor: default;
   &-letter {
     margin: 0;
