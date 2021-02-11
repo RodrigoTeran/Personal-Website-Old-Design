@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 import { containerNavbarVariants, elementNavbarVariants } from "./Variants";
 
 const Nav = () => {
   const [responsiveNav, setResponsiveNav] = useState(false);
+  const [openNav, setOpenNav] = useState(true);
   useEffect(() => {
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   });
   const handleResize = () => {
@@ -16,10 +19,31 @@ const Nav = () => {
       setResponsiveNav(false);
     }
   };
+  const isScrollGoingDown = useRef(false);
+  const lastPositionScroll = useRef(0);
+  const scoreUp = useRef(0);
+  const scoreDown = useRef(0);
+  const handleScroll = () => {
+    if (document.scrollingElement.scrollTop >= lastPositionScroll.current) {
+      isScrollGoingDown.current = true;
+      scoreDown.current = scoreDown.current + 1;
+      scoreUp.current = 0;
+    } else {
+      isScrollGoingDown.current = false;
+      scoreDown.current = 0;
+      scoreUp.current = scoreUp.current + 1;
+    }
+    lastPositionScroll.current = document.scrollingElement.scrollTop;
+    if (isScrollGoingDown.current && scoreDown.current >= 50) {
+      setOpenNav(false);
+    } else if (!isScrollGoingDown.current && scoreUp.current >= 50) {
+      setOpenNav(true);
+    }
+  };
   return (
     <>
       <motion.div
-        className="navbar"
+        className={`navbar ${openNav ? "" : "close"}`}
         variants={containerNavbarVariants}
         initial="hidden"
         animate="visible"
@@ -76,8 +100,8 @@ const Nav = () => {
               setResponsiveNav(false);
             }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+              <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
             </svg>
           </div>
           <div className="navbar-responsive-container-text">
@@ -108,7 +132,7 @@ const Nav = () => {
           </div>
         </div>
       </motion.div>
-      <div className="navbar-blur"></div>
+      <div className={`navbar-blur ${openNav ? "" : "close"}`}></div>
     </>
   );
 };

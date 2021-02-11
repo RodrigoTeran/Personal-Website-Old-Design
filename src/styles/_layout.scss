@@ -1,8 +1,11 @@
 .layout-division {
   display: flex;
   width: 100%;
+  justify-content: center;
   &-content{
     width: 100%;
+    max-width: 1600px;
+    margin-right: auto;
   }
 }
 .layout-container {
@@ -29,7 +32,7 @@
     height: 160px;
     background-color: var(--color-icons-layout);
     border-radius: 50%;
-    top: 50px;
+    top: 100px;
     right: 50px;
     transition: width ease-in-out 0.3s, height ease-in-out 0.3s;
   }

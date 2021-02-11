@@ -6,6 +6,7 @@
 @import "./navbar";
 @import "./socialMedia";
 @import "./Header/indexHeader";
+@import "./About/indexAbout";
 
 :root {
   --color-icons-layout: #202020;
@@ -18,7 +19,7 @@
   --text-selection: #43f7d5;
   --linear-gradient-darker: rgba(58, 54, 242, 1);
 
-  --webkit-scrollbar-thumb-background-color: rgba(100, 100, 100, 1);
+  --webkit-scrollbar-thumb-background-color: rgb(54, 54, 54);
   --webkit-scrollbar-thumb-background-color-hover: rgba(80, 80, 80, 1);
   --webkit-scrollbar-thumb-background-color-active: rgba(60, 60, 60, 1);
 }
