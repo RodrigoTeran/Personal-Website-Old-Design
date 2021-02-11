@@ -1,4 +1,4 @@
-.index-page-button {
+.header-button {
   cursor: pointer;
   color: var(--text-color-body);
   border-radius: 50px;
@@ -39,7 +39,7 @@
   &.blank {
     background: var(--text-color-body);
     color: var(--text-color-body-2);
-    margin-left: 20px;
+    margin: 0px 0px 0px 20px;
     &::after {
       opacity: 0;
     }
@@ -54,10 +54,9 @@
     }
   }
   @media screen and (max-width: 500px) {
-    width: 100%;
+    width: 90%;
     &.blank {
-      margin-left: 0px;
-      margin-top: 20px;
+      margin: 20px 0px 0px 0px;
     }
   }
 }

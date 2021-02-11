@@ -1,6 +1,7 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
-import IndexPageButton from "../Buttons/IndexPageButton";
+import { isWebpSupported } from "react-image-webp/dist/utils";
+import HeaderButton from "./Button";
 import { motion } from "framer-motion";
 import {
   sentenceVariants,
@@ -8,24 +9,26 @@ import {
   letterVariants,
 } from "./Variants";
 
-const LeftSide = () => {
+const Header = () => {
   const h1Text1 = "Soy Rodrigo";
   const h1Text2 = "Terán";
   return (
-    <div className="index-page-left-side">
-      <div className="index-page-left-side-container">
+    <header className="header">
+      <div className="header-left">
         <motion.h1
           initial="hidden"
           animate="visible"
           variants={sentenceVariants}
           exit="exit"
         >
-          <div className="index-page-left-side-div-sentence">
+          <div className="header-sentence">
             {h1Text1.split("").map((char, index) => {
               return (
                 <motion.div
-                  style={{ marginRight: char === "y" ? "20px" : "" }}
-                  className="index-page-left-side-div-letter"
+                  style={{
+                    marginRight: index === 2 ? "20px" : "",
+                  }}
+                  className="header-letter"
                   variants={letterVariants}
                   key={`${char}-${index}`}
                   whileHover={{ y: -30 }}
@@ -35,11 +38,11 @@ const LeftSide = () => {
               );
             })}
           </div>
-          <div className="index-page-left-side-div-sentence">
+          <div className="header-sentence">
             {h1Text2.split("").map((char, index) => {
               return (
                 <motion.div
-                  className="index-page-left-side-div-letter"
+                  className="header-letter"
                   variants={letterVariants}
                   key={`${char}-${index}`}
                   whileHover={{ y: -30 }}
@@ -57,7 +60,7 @@ const LeftSide = () => {
           exit={{
             scale: 0.8,
             opacity: 0,
-            transition: { type: "tween", delay: .1 },
+            transition: { type: "tween", delay: 0.1 },
           }}
         >
           <ReactTypingEffect
@@ -72,25 +75,35 @@ const LeftSide = () => {
           ></ReactTypingEffect>
         </motion.h2>
         <motion.div
-          className="index-page-left-side-buttons-container"
+          className="header-buttons-container"
           variants={buttonsContainerVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
-          <IndexPageButton
+          <HeaderButton
             onClickFunction={() => {}}
             text="Contáctame"
             type="gradient"
-          ></IndexPageButton>
-          <IndexPageButton
+          ></HeaderButton>
+          <HeaderButton
             onClickFunction={() => {}}
             text="Portafolio"
             type="noGradient"
-          ></IndexPageButton>
+          ></HeaderButton>
         </motion.div>
       </div>
-    </div>
+      <div className="header-right">
+        <img
+          src={`${
+            isWebpSupported
+              ? "/images/contact-page-me.webp"
+              : "/images/contact-page-me.jpg"
+          }`}
+          alt="Rodrigo Terán"
+        />
+      </div>
+    </header>
   );
 };
-export default LeftSide;
+export default Header;

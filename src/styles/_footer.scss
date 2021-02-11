@@ -1,7 +1,0 @@
-.footer-layout {
-  width: calc(100% - 10px);
-  height: 50px;
-  @include flex-center($justify: flex-end);
-  padding-right: 10px;
-  padding-top: 15px;
-}

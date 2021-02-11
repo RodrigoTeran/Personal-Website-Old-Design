@@ -1,0 +1,62 @@
+.navbar,
+.navbar-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+}
+.navbar {
+  z-index: 2;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  div {
+    margin: 0px 30px 0px 0px;
+    position: relative;
+    cursor: pointer;
+    font-family: "Fira Code";
+    font-size: 0.82rem;
+    color: var(--text-color-body-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-child {
+      margin: 0px 60px 0px 0px;
+    }
+    span {
+      svg {
+        fill: var(--text-selection);
+        width: 15px;
+        height: 15px;
+      }
+      margin: 0px 10px 0px 0px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -10px;
+      left: 50%;
+      transition: width ease-in-out 0.3s, left ease-in-out 0.3s;
+      z-index: 1;
+      background-color: var(--text-selection);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        &::after {
+          width: 100%;
+          left: 0%;
+        }
+      }
+    }
+  }
+  &-blur {
+    background-color: var(--background-color-body);
+    // background-color: aquamarine;
+    opacity: 0.8;
+    z-index: 1;
+  }
+}

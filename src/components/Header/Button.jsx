@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { buttonIndexVariants } from "./Variants";
+import { buttonHeaderVariants } from "./Variants";
 
-const IndexPageButton = ({ onClickFunction, text, type }) => {
+const HeaderButton = ({ onClickFunction, text, type }) => {
   return (
     <motion.button
-      variants={buttonIndexVariants}
+      variants={buttonHeaderVariants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 1.05 }}
-      className={`index-page-button ${
+      className={`header-button ${
         type === "gradient" ? "gradient" : "blank"
       }`}
       onClick={onClickFunction}
@@ -17,4 +17,4 @@ const IndexPageButton = ({ onClickFunction, text, type }) => {
     </motion.button>
   );
 };
-export default IndexPageButton;
+export default HeaderButton;

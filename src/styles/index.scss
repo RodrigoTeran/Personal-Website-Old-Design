@@ -1,17 +1,11 @@
 // Utils
 @import "./utils/mixins";
-@import "./buttons/socialMediaButtons";
-@import "./buttons/indexPageButtons";
 
-// Layout
+// Imports
 @import "./layout";
-@import "./footer";
-@import "./pages/headerPages";
-
-// Pages
-@import "./pages/IndexPage/indexIndexPage";
-@import "./pages/AboutPage/indexAboutPage";
-@import "./pages/WorkPage/indexWorkPage";
+@import "./navbar";
+@import "./socialMedia";
+@import "./Header/indexHeader";
 
 :root {
   --color-icons-layout: #202020;
@@ -20,6 +14,7 @@
   --background-color-body: #1d1d1d;
   --text-color-body: #fff;
   --text-color-body-2: #000;
+  --text-color-body-3: #DDD;
   --text-selection: #43f7d5;
   --linear-gradient-darker: rgba(58, 54, 242, 1);
 
@@ -28,7 +23,7 @@
   --webkit-scrollbar-thumb-background-color-active: rgba(60, 60, 60, 1);
 }
 ::-webkit-scrollbar {
-  width: 0.3em;
+  width: 1em;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--webkit-scrollbar-thumb-background-color);
@@ -55,21 +50,25 @@ html {
 }
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
   margin: 0px;
   padding: 0px;
-  background-color: var(--background-color-body);
   width: 100vw;
   height: 100%;
-  position: relative;
   top: 0px;
   left: 0px;
   font-size: 16px;
   font-family: sans-serif;
+  background-color: var(--background-color-body);
   color: var(--text-color-body);
-  overflow-x: hidden;
 }
 input,
 button {
   outline: none;
   border-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color-body);
 }

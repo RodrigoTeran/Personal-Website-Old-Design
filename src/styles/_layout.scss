@@ -1,3 +1,10 @@
+.layout-division {
+  display: flex;
+  width: 100%;
+  &-content{
+    width: 100%;
+  }
+}
 .layout-container {
   z-index: -1000;
   position: fixed;
