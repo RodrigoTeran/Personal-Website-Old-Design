@@ -7,6 +7,7 @@ import {
   sentenceVariants,
   buttonsContainerVariants,
   letterVariants,
+  imageVariants,
 } from "./Variants";
 
 const Header = () => {
@@ -19,7 +20,6 @@ const Header = () => {
           initial="hidden"
           animate="visible"
           variants={sentenceVariants}
-          exit="exit"
         >
           <div className="header-sentence">
             {h1Text1.split("").map((char, index) => {
@@ -57,11 +57,6 @@ const Header = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          exit={{
-            scale: 0.8,
-            opacity: 0,
-            transition: { type: "tween", delay: 0.1 },
-          }}
         >
           <ReactTypingEffect
             text={[
@@ -79,7 +74,6 @@ const Header = () => {
           variants={buttonsContainerVariants}
           initial="hidden"
           animate="visible"
-          exit="exit"
         >
           <HeaderButton
             onClickFunction={() => {}}
@@ -93,7 +87,12 @@ const Header = () => {
           ></HeaderButton>
         </motion.div>
       </div>
-      <div className="header-right">
+      <motion.div
+        className="header-right"
+        variants={imageVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <img
           src={`${
             isWebpSupported
@@ -102,7 +101,7 @@ const Header = () => {
           }`}
           alt="Rodrigo Terán"
         />
-      </div>
+      </motion.div>
     </header>
   );
 };

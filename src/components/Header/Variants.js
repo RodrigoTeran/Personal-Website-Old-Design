@@ -26,11 +26,6 @@ export const sentenceVariants = {
       when: "beforeChildren",
     },
   },
-  exit: {
-    scale: 0.8,
-    opacity: 0,
-    transition: { type: "tween" },
-  },
 };
 
 export const buttonsContainerVariants = {
@@ -45,11 +40,6 @@ export const buttonsContainerVariants = {
       when: "beforeChildren",
     },
   },
-  exit: {
-    scale: 0.8,
-    opacity: 0,
-    transition: { type: "tween", delay: 0.2 },
-  },
 };
 
 export const letterVariants = {
@@ -63,5 +53,15 @@ export const letterVariants = {
     originY: "100%",
     color: "#fff",
     transition: { type: "spring", stiffness: 200 },
+  },
+};
+
+export const imageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { type: "tween", delay: 0.5, duration: 1.2 },
   },
 };
