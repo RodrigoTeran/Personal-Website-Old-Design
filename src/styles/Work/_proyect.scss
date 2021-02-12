@@ -23,6 +23,7 @@
       top: 0;
       left: 0;
       z-index: 1;
+      background: var(--text-selection);
       @include gradient-background-1();
       transition: opacity ease-in-out 0.3s;
     }

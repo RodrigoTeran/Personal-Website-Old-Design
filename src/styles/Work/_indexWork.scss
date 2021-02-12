@@ -2,13 +2,13 @@
 .work {
   padding: 0px 0px 0px 100px;
   width: calc(100% - 100px);
-  margin-bottom: 500px;
+  margin: 0px 0px 150px 0px;
   transition: width ease-in-out 0.3s, padding ease-in-out 0.3s;
   h2 {
     font-size: 3rem;
     position: relative;
     width: fit-content;
-    transition: opacity ease-in-out .5s, transform ease-in-out .5s;
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
     margin: 0px 0px 75px 320px;
     &::after {
       content: "";

@@ -14,13 +14,13 @@ const Work = () => {
           name="Dog Finder"
           description="Dog Finder es una plataforma web que ayuda a encontrar mascotas perdidas con Inteligencia Artificial."
           arrayTechnologies={[
-            "React JS",
-            "Node JS",
-            "Mongo DB",
+            "ReactJS",
+            "NodeJS",
+            "MongoDB",
             "Flask",
             "OpenCV",
             "Stripe",
-            "Google Maps API",
+            "GoogleMapsAPI",
           ]}
           linkToProyect="https://dogfinder.com.mx/"
           mode="1"
@@ -32,7 +32,7 @@ const Work = () => {
           }
           name="BIMAS SC"
           description="BIMAS SC es una Empresa con la finalidad de ofrecer servicios integrales en temas Ambientales, de Seguridad y Salud."
-          arrayTechnologies={["Next JS", "SCSS", "React JS"]}
+          arrayTechnologies={["NextJS", "SCSS", "ReactJS"]}
           linkToProyect="https://bimas.com.mx/"
           mode="2"
           id="2"

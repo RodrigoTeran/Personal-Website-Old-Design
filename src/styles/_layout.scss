@@ -4,7 +4,7 @@
   justify-content: center;
   position: relative;
   z-index: 0;
-  &-content{
+  &-content {
     width: 100%;
     max-width: 1600px;
     margin-right: auto;
@@ -51,5 +51,76 @@
       width: 80px;
       height: 80px;
     }
+  }
+}
+.layout-msg {
+  position: fixed;
+  z-index: 99999;
+  width: 90vw;
+  top: 20px;
+  left: calc(5vw - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 10px 20px 10px 20px;
+  transition: opacity ease-in-out 0.3s, 0.3s visibility ease-in-out 0s;
+  button {
+    position: absolute;
+    background: transparent;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &-text {
+    margin: 10px 0px 0px 0px;
+    font-size: 0.9rem;
+  }
+  &.close {
+    visibility: hidden;
+    opacity: 0;
+  }
+  @media screen and (max-width: 960px) {
+    width: 80vw;
+    left: calc(10vw - 20px);
+  }
+}
+.layout-loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: var(--text-color-body-2);
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity ease-in-out 0.3s, 0.3s visibility ease-in-out 0s;
+  &.close {
+    visibility: hidden;
+    opacity: 0;
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--webkit-scrollbar-thumb-background-color-hover);
+    animation: loader-pages-svg 2s linear infinite;
+  }
+}
+@keyframes loader-pages-svg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
