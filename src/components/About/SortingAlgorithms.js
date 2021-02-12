@@ -3,7 +3,7 @@ export function getMergeSortAnimations(array) {
   if (array.length <= 1) return array;
   const auxiliaryArray = array.slice();
   mergeSortHelper(array, 0, array.length - 1, auxiliaryArray, animations);
-  console.log(animations)
+  console.log(animations);
   return animations;
 }
 
@@ -12,7 +12,7 @@ function mergeSortHelper(
   startIdx,
   endIdx,
   auxiliaryArray,
-  animations,
+  animations
 ) {
   if (startIdx === endIdx) return;
   const middleIdx = Math.floor((startIdx + endIdx) / 2);
@@ -27,7 +27,7 @@ function doMerge(
   middleIdx,
   endIdx,
   auxiliaryArray,
-  animations,
+  animations
 ) {
   let k = startIdx;
   let i = startIdx;
@@ -76,3 +76,27 @@ function doMerge(
     mainArray[k++] = auxiliaryArray[j++];
   }
 }
+export const skills = [
+  { skill: "HTML", level: 72 },
+  { skill: "CSS", level: 58 },
+  { skill: "JS", level: 84 },
+  { skill: "React", level: 80 },
+  { skill: "Node", level: 79 },
+  { skill: "Django", level: 27 },
+  { skill: "Mongo DB", level: 46 },
+  { skill: "Python", level: 78 },
+  { skill: "Next JS", level: 59 },
+  { skill: "JQuery", level: 69 },
+];
+export const skillsSorted = [
+  { skill: "Django", level: 27 },
+  { skill: "Mongo DB", level: 46 },
+  { skill: "Next JS", level: 59 },
+  { skill: "CSS", level: 58 },
+  { skill: "JQuery", level: 69 },
+  { skill: "HTML", level: 72 },
+  { skill: "Python", level: 78 },
+  { skill: "Node", level: 79 },
+  { skill: "React", level: 80 },
+  { skill: "JS", level: 84 },
+];
