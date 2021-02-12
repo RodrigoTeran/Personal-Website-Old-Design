@@ -1,13 +1,6 @@
 // Utils
 @import "./utils/mixins";
 
-// Imports
-@import "./layout";
-@import "./navbar";
-@import "./socialMedia";
-@import "./Header/indexHeader";
-@import "./About/indexAbout";
-
 :root {
   --color-icons-layout: #202020;
   --border-works: rgb(42, 42, 42);
@@ -73,3 +66,10 @@ a {
   text-decoration: none;
   color: var(--text-color-body);
 }
+
+// Imports
+@import "./layout";
+@import "./navbar";
+@import "./socialMedia";
+@import "./Header/indexHeader";
+@import "./About/indexAbout";

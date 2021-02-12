@@ -34,10 +34,14 @@ const Nav = () => {
       scoreUp.current = scoreUp.current + 1;
     }
     lastPositionScroll.current = document.scrollingElement.scrollTop;
-    if (isScrollGoingDown.current && scoreDown.current >= 50) {
-      setOpenNav(false);
-    } else if (!isScrollGoingDown.current && scoreUp.current >= 50) {
+    if (document.scrollingElement.scrollTop <= 50) {
       setOpenNav(true);
+    } else {
+      if (isScrollGoingDown.current && scoreDown.current >= 10) {
+        setOpenNav(false);
+      } else if (!isScrollGoingDown.current && scoreUp.current >= 10) {
+        setOpenNav(true);
+      }
     }
   };
   return (

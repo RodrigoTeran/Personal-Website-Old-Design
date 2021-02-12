@@ -15,15 +15,12 @@
     position: relative;
     margin: 0px 0px 120px 0px;
     a {
-      margin: 0px 0px 20px 0px;
+      margin: 20px 0px 0px 0px;
       svg {
         width: 20px;
         height: 20px;
         fill: var(--text-color-body);
         transition: fill ease-in-out 0.3s, transform ease-in-out 0.3s;
-      }
-      &:last-child {
-        margin: 0px;
       }
       @media (hover: hover) and (pointer: fine) {
         &:hover {
@@ -36,6 +33,7 @@
     }
     &-line {
       content: "";
+      margin: 20px 0px 0px 0px;
       z-index: 1;
       position: absolute;
       bottom: -120px;
