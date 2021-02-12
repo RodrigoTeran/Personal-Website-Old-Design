@@ -4,6 +4,7 @@
   margin: 0px 0px 120px 0px;
   position: relative;
   &-image {
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
     width: 50%;
     position: relative;
     z-index: 1;
@@ -43,6 +44,7 @@
     h3 {
       width: 100%;
       font-size: 2rem;
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
       &.mode-proyect-1 {
         text-align: right;
       }
@@ -55,7 +57,7 @@
       background-color: var(--background-color-works);
       border-radius: 5px;
       padding: 30px 50px 30px 50px;
-
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
       &.mode-proyect-1 {
         transform: translateX(-100px);
         text-align: right;
@@ -71,6 +73,7 @@
       margin: 20px 0px 0px 0px;
       font-family: "Fira Code";
       font-size: 0.9rem;
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
       &.mode-proyect-1 {
         justify-content: flex-end;
         text-align: right;
@@ -90,6 +93,7 @@
     }
     &-link {
       margin: 20px 0px 0px 0px;
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
       &.mode-proyect-1 {
         text-align: right;
       }
@@ -101,10 +105,11 @@
           fill: var(--text-selection);
           width: 30px;
           height: 30px;
-          transition: transform ease-in-out 0.3s;
+          transition: transform ease-in-out 0.3s, fill ease-in-out 0.3s;
           @media (hover: hover) and (pointer: fine) {
             &:hover {
               transform: translateY(-5px);
+              fill: var(--text-color-body);
             }
           }
         }

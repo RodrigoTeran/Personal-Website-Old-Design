@@ -81,7 +81,7 @@ const Header = () => {
             type="gradient"
           ></HeaderButton>
           <HeaderButton
-            onClickFunction={() => {}}
+            onClickHref="/Profile.pdf"
             text="Portafolio"
             type="noGradient"
           ></HeaderButton>

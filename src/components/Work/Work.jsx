@@ -24,6 +24,7 @@ const Work = () => {
           ]}
           linkToProyect="https://dogfinder.com.mx/"
           mode="1"
+          id="1"
         ></Proyect>
         <Proyect
           imgSrc={
@@ -34,6 +35,7 @@ const Work = () => {
           arrayTechnologies={["Next JS", "SCSS", "React JS"]}
           linkToProyect="https://bimas.com.mx/"
           mode="2"
+          id="2"
         ></Proyect>
       </div>
     </div>
