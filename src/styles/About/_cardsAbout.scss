@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0px 0px 50px 0px;
-  transition: opacity ease-in-out 1s, transform ease-in-out 1s;
+  transition: opacity ease-in-out .5s, transform ease-in-out .5s;
   &-card {
     width: 90px;
     height: 90px;

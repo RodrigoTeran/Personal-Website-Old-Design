@@ -61,7 +61,7 @@ const About = () => {
       const top = getTop(listaComponentes[i]);
       if (
         document.scrollingElement.scrollTop >=
-        top - window.innerHeight / 1.5
+        top - window.innerHeight / 1.2
       ) {
         if (i === 0) {
           setIsH2(true);

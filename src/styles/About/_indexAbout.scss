@@ -1,6 +1,6 @@
 @import "./cardsAbout";
 .about {
-  margin: 60px 0px 100px 0px;
+  margin: 60px 0px 200px 0px;
   padding: 0px 0px 0px 100px;
   width: calc(100% - 100px);
   transition: width ease-in-out 0.3s, padding ease-in-out 0.3s;
@@ -8,7 +8,7 @@
     font-size: 3rem;
     position: relative;
     width: fit-content;
-    transition: opacity ease-in-out 1s, transform ease-in-out 1s;
+    transition: opacity ease-in-out .5s, transform ease-in-out .5s;
     &::after {
       content: "";
       position: absolute;
@@ -23,7 +23,7 @@
   p {
     font-size: 1.2rem;
     margin: 0px 0px 30px 0px;
-    transition: opacity ease-in-out 1s, transform ease-in-out 1s;
+    transition: opacity ease-in-out .5s, transform ease-in-out .5s;
     span {
       color: var(--text-selection);
     }
@@ -37,7 +37,7 @@
     &-right {
       width: 60%;
       padding: 0px 80px 0px 80px;
-      transition: opacity ease-in-out 1s, transform ease-in-out 1s;
+      transition: opacity ease-in-out .5s, transform ease-in-out .5s;
       p {
         margin: 0px 0px 25px 0px;
       }
@@ -46,7 +46,7 @@
         &-selection {
           display: flex;
           align-items: center;
-          transition: opacity ease-in-out 1s, transform ease-in-out 1s;
+          transition: opacity ease-in-out .5s, transform ease-in-out .5s;
           span {
             font-size: 1.2rem;
             margin: 0px 15px 0px 0px;
@@ -96,7 +96,7 @@
           }
         }
         &-action {
-          transition: opacity ease-in-out 1s, transform ease-in-out 1s;
+          transition: opacity ease-in-out .5s, transform ease-in-out .5s;
           padding: 25px 0px 0px 0px;
           &-row {
             display: flex;
@@ -105,7 +105,7 @@
             margin: 0px 0px 10px 0px;
             &-level {
               transition: width ease-in-out 0.1s;
-              height: 12px;
+              height: 8px;
               background-color: var(--text-selection);
             }
             &-skill {
