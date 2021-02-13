@@ -64,7 +64,7 @@ const Contact = ({
     if (inputName === "" || inputEmail === "" || inputMsg === "") {
       setIsInLayoutLoader(false);
       setIsInLayout(true);
-      setBackgroundColor("rgb(219, 111, 111)");
+      setBackgroundColor("rgb(241, 160, 160)");
       setTitle("Error");
       setText("Faltan datos por llenar");
       setTextColor("rgb(69,9,7)");
@@ -80,7 +80,7 @@ const Contact = ({
           (result) => {
             setIsInLayoutLoader(false);
             setIsInLayout(true);
-            setBackgroundColor("rgb(100, 199, 130)");
+            setBackgroundColor("rgb(148, 231, 159)");
             setTitle("Todo bien");
             setText("Se mandó el correo con éxito");
             setTextColor("rgb(11, 65, 27)");
@@ -88,7 +88,7 @@ const Contact = ({
           (error) => {
             setIsInLayoutLoader(false);
             setIsInLayout(true);
-            setBackgroundColor("rgb(189, 71, 71)");
+            setBackgroundColor("rgb(241, 160, 160)");
             setTitle("Error");
             setText("Ocurrió un error al mandar el correo");
             setTextColor("rgb(99,9,27)");
