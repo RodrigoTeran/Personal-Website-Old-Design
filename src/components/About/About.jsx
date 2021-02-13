@@ -111,7 +111,7 @@ const About = () => {
           </p>
           <p className={`p2-about ${isP2 ? "" : "not-appear-about"}`}>
             Soy un apasionado de la tecnología, en especial la{" "}
-            <span>Inteligencia Artificial.</span> Me meta es crear herramientas
+            <span>Inteligencia Artificial.</span> Mi meta es crear herramientas
             tecnológicas con un rendimiento increíble.
           </p>
           <p className={`p3-about ${isP3 ? "" : "not-appear-about"}`}>
