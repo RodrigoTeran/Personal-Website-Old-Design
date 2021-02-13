@@ -13,6 +13,21 @@ import {
 const Header = () => {
   const h1Text1 = "Soy Rodrigo";
   const h1Text2 = "Terán";
+  const getTop = (component) => {
+    // Función que calcula la distancia que existe de un componente y hasta arriba de la página
+    return parseInt(
+      document.querySelector(component).getBoundingClientRect().top +
+        document.scrollingElement.scrollTop
+    );
+  };
+  const goto = (where) => {
+    const top = getTop(where) - 100;
+    window.scroll({
+      top: top,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <header className="header">
       <div className="header-left">
@@ -76,7 +91,9 @@ const Header = () => {
           animate="visible"
         >
           <HeaderButton
-            onClickFunction={() => {}}
+            onClickFunction={() => {
+              goto(".contact");
+            }}
             text="Contáctame"
             type="gradient"
           ></HeaderButton>

@@ -102,6 +102,9 @@ const Nav = () => {
           className="navbar-text"
           style={{ margin: "0px 60px 0px 0px" }}
           variants={elementNavbarVariants}
+          onClick={() => {
+            goto(".contact");
+          }}
         >
           <span>
             {" "}
@@ -164,7 +167,12 @@ const Nav = () => {
             </span>
             Proyectos
           </div>
-          <div className="navbar-responsive-container-text">
+          <div
+            className="navbar-responsive-container-text"
+            onClick={() => {
+              goto(".contact");
+            }}
+          >
             <span>
               {" "}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
