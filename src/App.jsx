@@ -10,6 +10,7 @@ import Work from "./components/Work/Work";
 import Contact from "./components/Contact/Contact";
 import LayoutMsg from "./components/Contact/LayoutMsg";
 import LayoutLoader from "./components/Contact/LayoutLoader";
+import SocialMediaResponsive from "./components/SocialMediaResponsive";
 
 const App = () => {
   // LayoutMsg
@@ -48,6 +49,7 @@ const App = () => {
             setText={setText}
             setIsInLayoutLoader={setIsInLayoutLoader}
           ></Contact>
+          <SocialMediaResponsive></SocialMediaResponsive>
         </div>
       </div>
     </>

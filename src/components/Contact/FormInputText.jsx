@@ -7,11 +7,16 @@ const FormInputText = ({
   id,
   isTextArea,
   name,
+  appearVar,
 }) => {
   const [isLabelOpened, setIsLabelOpened] = useState(false);
   const [isInputCompleted, setIsInputCompleted] = useState(false);
   return (
-    <div className="row-message-form-input">
+    <div
+      className={`row-message-form-input ${
+        appearVar ? "" : "not-appear-about"
+      }`}
+    >
       <label className={`${isLabelOpened ? "open" : ""}`} htmlFor={id}>
         {text}
       </label>

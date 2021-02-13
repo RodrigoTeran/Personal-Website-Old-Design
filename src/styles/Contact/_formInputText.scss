@@ -2,6 +2,7 @@
   width: 400px;
   position: relative;
   margin: 0px 0px 50px 0px;
+  transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
   label {
     position: absolute;
     top: 0.7rem;
