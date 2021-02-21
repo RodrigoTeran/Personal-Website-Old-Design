@@ -1,0 +1,163 @@
+.portfolioWork__proyect {
+  display: flex;
+  width: 100%;
+  margin: 0px 0px 120px 0px;
+  position: relative;
+  &__image {
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 5px;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: var(--text-selection);
+      @include gradient-background-1();
+      transition: opacity ease-in-out 0.3s;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        &::after {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+  &__info {
+    width: 40%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      width: 100%;
+      font-size: 2rem;
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+      &.portfolioWork__proyect__modeProyect1 {
+        text-align: right;
+      }
+      &.portfolioWork__proyect__modeProyect2 {
+        text-align: left;
+      }
+    }
+    &__description {
+      width: 100%;
+      background-color: var(--background-color-works);
+      border-radius: 5px;
+      padding: 30px 50px 30px 50px;
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+      &.portfolioWork__proyect__modeProyect1 {
+        transform: translateX(-100px);
+        text-align: right;
+      }
+      &.portfolioWork__proyect__modeProyect2 {
+        text-align: left;
+      }
+    }
+    &__array {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px 0px 0px 0px;
+      font-family: "Fira Code";
+      font-size: 0.9rem;
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+      &.portfolioWork__proyect__modeProyect1 {
+        justify-content: flex-end;
+        text-align: right;
+      }
+      &.portfolioWork__proyect__modeProyect2 {
+        justify-content: flex-start;
+        text-align: left;
+      }
+      &__element {
+        &.portfolioWork__proyect__modeProyect1 {
+          margin: 0px 0px 7.5px 20px;
+        }
+        &.portfolioWork__proyect__modeProyect2 {
+          margin: 0px 20px 7.5px 0px;
+        }
+      }
+    }
+    &__link {
+      margin: 20px 0px 0px 0px;
+      transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+      &.portfolioWork__proyect__modeProyect1 {
+        text-align: right;
+      }
+      &.portfolioWork__proyect__modeProyect2 {
+        text-align: left;
+      }
+      a {
+        svg {
+          fill: var(--text-selection);
+          width: 30px;
+          height: 30px;
+          transition: transform ease-in-out 0.3s, fill ease-in-out 0.3s;
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              transform: translateY(-5px);
+              fill: var(--text-color-body);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    align-items: center;
+    &__image,
+    &__info {
+      width: 80%;
+    }
+    &__info {
+      h3 {
+        &.portfolioWork__proyect__modeProyect1,
+        &.portfolioWork__proyect__modeProyect2 {
+          text-align: center;
+        }
+      }
+      &__description {
+        &.portfolioWork__proyect__modeProyect1,
+        &.portfolioWork__proyect__modeProyect2 {
+          width: calc(100% - 40px);
+          transform: translateX(0px);
+          padding: 30px 20px 30px 20px;
+          text-align: left;
+        }
+      }
+      &__array {
+        &.portfolioWork__proyect__modeProyect1,
+        &.portfolioWork__proyect__modeProyect2 {
+          justify-content: flex-start;
+          text-align: left;
+        }
+        &__element {
+          &.portfolioWork__proyect__modeProyect1 {
+            margin: 0px 15px 7.5px 5px;
+          }
+        }
+      }
+      &__link {
+        &.portfolioWork__proyect__modeProyect1,
+        &.portfolioWork__proyect__modeProyect2 {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

@@ -1,57 +1,77 @@
-import React, { useState } from "react";
+// React
+import React, { useState, useRef } from "react";
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 
-// Components
-import Header from "./components/Header/Header";
-import About from "./components/About/About";
-import Layout from "./components/Layout";
-import SocialMedia from "./components/SocialMedia";
-import Nav from "./components/Nav";
-import Work from "./components/Work/Work";
-import Contact from "./components/Contact/Contact";
-import LayoutMsg from "./components/Contact/LayoutMsg";
-import LayoutLoader from "./components/Contact/LayoutLoader";
-import SocialMediaResponsive from "./components/SocialMediaResponsive";
+// Framer motion
+import { AnimatePresence } from "framer-motion";
+
+// Components App
+import Layout from "./components/Layout/Layout";
+import Nav from "./components/Layout/Nav";
+import LayoutMsg from "./components/Layout/LayoutMsg";
+import LayoutLoader from "./components/Layout/LayoutLoader";
+
+// Pages
+import Portfolio from "./pages/Portfolio";
 
 const App = () => {
   // LayoutMsg
-  const [isInLayout, setIsInLayout] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState("");
-  const [textColor, setTextColor] = useState("");
-  const [title, setTitle] = useState("");
-  const [text, setText] = useState("");
+  const [isLayoutMsgInLayout, setIsLayoutMsgInLayout] = useState(false);
+  const [backgroundColorLayoutMsg, setBackgroundColorLayoutMsg] = useState("");
+  const [textColorLayoutMsg, setTextColorLayoutMsg] = useState("");
+  const [titleLayoutMsg, setTitleLayoutMsg] = useState("");
+  const [textLayoutMsg, setTextLayoutMsg] = useState("");
 
   // LayoutLoader
   const [isInLayoutLoader, setIsInLayoutLoader] = useState(false);
+
+  // Location hook for AnimatePresence animations
+  const location = useLocation();
+
+  // Portfolio page
+  const aboutRef = useRef(null);
+  const workRef = useRef(null);
+  const contactRef = useRef(null);
   return (
     <>
       <Layout></Layout>
-      <Nav></Nav>
+      <Nav
+        // Refs
+        aboutRef={aboutRef}
+        workRef={workRef}
+        contactRef={contactRef}
+      ></Nav>
       <LayoutMsg
-        isInLayout={isInLayout}
-        backgroundColor={backgroundColor}
-        textColor={textColor}
-        title={title}
-        text={text}
-        setIsInLayout={setIsInLayout}
+        isInLayout={isLayoutMsgInLayout}
+        backgroundColor={backgroundColorLayoutMsg}
+        textColor={textColorLayoutMsg}
+        title={titleLayoutMsg}
+        text={textLayoutMsg}
+        setIsInLayout={setIsLayoutMsgInLayout}
       ></LayoutMsg>
       <LayoutLoader isInLayout={isInLayoutLoader}></LayoutLoader>
-      <div className="layout-division">
-        <SocialMedia></SocialMedia>
-        <div className="layout-division-content">
-          <Header></Header>
-          <About></About>
-          <Work></Work>
-          <Contact
-            setIsInLayout={setIsInLayout}
-            setBackgroundColor={setBackgroundColor}
-            setTextColor={setTextColor}
-            setTitle={setTitle}
-            setText={setText}
-            setIsInLayoutLoader={setIsInLayoutLoader}
-          ></Contact>
-          <SocialMediaResponsive></SocialMediaResponsive>
-        </div>
-      </div>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route exact path="/">
+            <Portfolio
+              // Layout MSG
+              setIsInLayout={setIsLayoutMsgInLayout}
+              setBackgroundColor={setBackgroundColorLayoutMsg}
+              setTextColor={setTextColorLayoutMsg}
+              setTitle={setTitleLayoutMsg}
+              setText={setTextLayoutMsg}
+              setIsInLayoutLoader={setIsInLayoutLoader}
+              // Refs
+              aboutRef={aboutRef}
+              workRef={workRef}
+              contactRef={contactRef}
+            ></Portfolio>
+          </Route>
+          <Route path="/">
+            <Redirect to="/"></Redirect>
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </>
   );
 };

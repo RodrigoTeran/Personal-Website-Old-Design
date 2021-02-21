@@ -1,0 +1,90 @@
+@import "./buttons";
+
+.portfolioHeader {
+  width: calc(100% - 100px);
+  padding: 0px 0px 0px 100px;
+  display: flex;
+  height: 100vh;
+  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+  transition: width ease-in-out 0.3s, padding ease-in-out 0.3s;
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  &__right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: margin ease-in-out 0.3s;
+    img {
+      border-radius: 50%;
+      width: 250px;
+    }
+  }
+  &__letter,
+  &__sentence {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+  }
+  h1 {
+    font-size: 4.5rem;
+    transition: font-size ease-in-out 0.3s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0;
+    transform: font-size ease-in-out 0.3s;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 0px 0px 40px 0px;
+    transform: padding ease-in-out 0.3s;
+  }
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    padding: 0px 0px 0px 0px;
+    min-height: 850px;
+    h1 {
+      font-size: 4.5rem;
+    }
+    &__right {
+      margin: 70px 0px 0px 0px;
+    }
+    &__left {
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+    &__buttonsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    h2 {
+      padding: 0px 20px 0px 20px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}

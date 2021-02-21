@@ -1,0 +1,46 @@
+.portfolioAbout__cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
+  transition: opacity ease-in-out .5s, transform ease-in-out .5s;
+  &__card {
+    width: 90px;
+    height: 90px;
+    background-color: var(--background-color-body);
+    border: 5px solid var(--border-works);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform ease-in-out 0.3s;
+    position: relative;
+    svg {
+      fill: var(--text-color-body);
+      width: 40px;
+      height: 40px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      transition: opacity ease-in-out 0.3s;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: var(--text-selection);
+      @include gradient-background-1();
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: translateY(-10px);
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

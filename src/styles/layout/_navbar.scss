@@ -1,0 +1,128 @@
+.navbar,
+.navbarBlur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  transition: top ease-in-out .3s;
+  &.close{
+   top: -100px; 
+  }
+}
+.navbarBlur {
+  background-color: var(--background-color-body);
+  opacity: 0.9;
+  z-index: 1;
+}
+.navbar {
+  z-index: 2;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &__text {
+    margin: 0px 30px 0px 0px;
+    position: relative;
+    cursor: pointer;
+    font-family: "Fira Code";
+    font-size: 0.82rem;
+    color: var(--text-color-body-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      svg {
+        fill: var(--text-selection);
+        width: 15px;
+        height: 15px;
+      }
+      margin: 0px 10px 0px 0px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -10px;
+      left: 50%;
+      transition: width ease-in-out 0.3s, left ease-in-out 0.3s;
+      z-index: 1;
+      background-color: var(--text-selection);
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        &::after {
+          width: 100%;
+          left: 0%;
+        }
+      }
+    }
+  }
+  &__responsive {
+    display: none;
+    height: 35px;
+    margin: 0px 30px 0px 0px;
+    cursor: pointer;
+    &__line {
+      width: 45px;
+      height: 4px;
+      background-color: var(--text-color-body);
+    }
+    &__container {
+      background-color: var(--background-color-body);
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      right: 0px;
+      transition: clip-path ease-in-out 0.5s;
+      clip-path: circle(0% at 50% 50%);
+      padding: 20px 0px 0px 0px;
+      &.open {
+        clip-path: circle(100% at 50% 50%);
+      }
+      &__back {
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        svg {
+          fill: var(--text-color-body);
+          width: 35px;
+          height: 35px;
+        }
+      }
+      &__text {
+        display: flex;
+        font-size: 10vw;
+        span {
+          svg {
+            fill: var(--text-selection);
+            width: 10vw;
+            height: 10vw;
+          }
+          margin: 0px 5vw 0px 0px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 960px) {
+    &__responsive {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__text {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "./layoutContainer";
+@import "./layoutLoader";
+@import "./layoutMsg";
+@import "./navbar";
+
+.notAppear {
+  opacity: 0;
+  transform: translateY(50px);
+}

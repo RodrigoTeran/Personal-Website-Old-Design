@@ -8,7 +8,7 @@
   --background-color-body: #1d1d1d;
   --text-color-body: #fff;
   --text-color-body-2: #000;
-  --text-color-body-3: #DDD;
+  --text-color-body-3: #ddd;
   --text-selection: #43f7d5;
   --linear-gradient-darker: rgba(58, 54, 242, 1);
 
@@ -67,11 +67,13 @@ a {
   color: var(--text-color-body);
 }
 
-// Imports
-@import "./layout";
-@import "./navbar";
-@import "./socialMedia";
-@import "./Header/indexHeader";
-@import "./About/indexAbout";
-@import "./Work/indexWork";
-@import "./Contact/indexContact";
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+  display: none;
+}
+
+// Layout
+@import "./layout/indexLayout";
+
+// Pages
+@import "./pages/portfolio/indexPortfolio";

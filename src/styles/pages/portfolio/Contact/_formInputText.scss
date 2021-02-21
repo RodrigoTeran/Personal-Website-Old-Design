@@ -1,0 +1,64 @@
+.portfolioContact__input {
+  width: 400px;
+  position: relative;
+  margin: 0px 0px 50px 0px;
+  transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+  label {
+    position: absolute;
+    top: 0.7rem;
+    left: 10px;
+    z-index: 1;
+    font-size: 1rem;
+    color: var(--text-color-body);
+    transition: top ease-in-out 0.3s, left ease-in-out 0.3s;
+    cursor: text;
+    &.open {
+      top: -1.5rem;
+      left: 0px;
+    }
+  }
+  input,
+  textarea {
+    background-color: var(--webkit-scrollbar-thumb-background-color-active);
+    width: 400px;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.2rem;
+    font-family: "Fira Code";
+    height: 20px;
+    color: var(--text-color-body);
+    margin: 0;
+    box-shadow: 0 1px 0 0 var(--text-color-body-3);
+    border: 0;
+    outline: 0;
+    transition: box-shadow 150ms ease-out;
+    &:focus {
+      box-shadow: 0 2px 0 0 var(--linear-gradient-darker);
+    }
+    &.completed {
+      box-shadow: 0 2px 0 0 var(--text-selection);
+    }
+  }
+  textarea {
+    resize: none;
+    width: 630px;
+    height: 150px;
+  }
+  @media screen and (max-width: 960px) {
+    width: 520px;
+    input {
+      width: 500px;
+    }
+    textarea {
+      width: 500px;
+    }
+  }
+  @media screen and (max-width: 560px) {
+    width: 300px;
+    input {
+      width: 280px;
+    }
+    textarea {
+      width: 280px;
+    }
+  }
+}

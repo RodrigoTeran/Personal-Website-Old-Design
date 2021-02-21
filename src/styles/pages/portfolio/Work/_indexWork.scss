@@ -1,0 +1,40 @@
+@import "./proyect";
+.portfolioWork {
+  padding: 0px 0px 0px 100px;
+  width: calc(100% - 100px);
+  margin: 0px 0px 150px 0px;
+  transition: width ease-in-out 0.3s, padding ease-in-out 0.3s;
+  h2 {
+    font-size: 3rem;
+    position: relative;
+    width: fit-content;
+    transition: opacity ease-in-out 0.5s, transform ease-in-out 0.5s;
+    margin: 0px 0px 75px 320px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1.5px);
+      height: 3px;
+      width: 300px;
+      left: -320px;
+      z-index: 1;
+      background-color: var(--webkit-scrollbar-thumb-background-color);
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+    h2 {
+      width: 100%;
+      margin: 0px 0px 75px 0px;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
