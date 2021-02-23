@@ -1,7 +1,7 @@
 @import "./proyect";
 .portfolioWork {
   padding: 0px 0px 0px 100px;
-  width: calc(100% - 100px);
+  width: 100%;
   margin: 0px 0px 150px 0px;
   transition: width ease-in-out 0.3s, padding ease-in-out 0.3s;
   h2 {
@@ -20,10 +20,6 @@
       z-index: 1;
       background-color: var(--webkit-scrollbar-thumb-background-color);
     }
-  }
-  @media screen and (max-width: 1150px) {
-    width: 100%;
-    padding: 0px 0px 0px 0px;
   }
   @media screen and (max-width: 960px) {
     width: 100%;

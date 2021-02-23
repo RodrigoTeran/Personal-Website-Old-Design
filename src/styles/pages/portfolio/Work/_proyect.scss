@@ -54,7 +54,7 @@
       }
     }
     &__description {
-      width: 100%;
+      width: calc(100% + 100px);
       background-color: var(--background-color-works);
       border-radius: 5px;
       padding: 30px 50px 30px 50px;
@@ -134,7 +134,7 @@
       &__description {
         &.portfolioWork__proyect__modeProyect1,
         &.portfolioWork__proyect__modeProyect2 {
-          width: calc(100% - 40px);
+          width: 100%;
           transform: translateX(0px);
           padding: 30px 20px 30px 20px;
           text-align: left;

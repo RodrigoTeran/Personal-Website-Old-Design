@@ -24,7 +24,7 @@
     padding: 10px 10px 10px 10px;
     font-size: 1.2rem;
     font-family: "Fira Code";
-    height: 20px;
+    height: 40px;
     color: var(--text-color-body);
     margin: 0;
     box-shadow: 0 1px 0 0 var(--text-color-body-3);
@@ -46,19 +46,19 @@
   @media screen and (max-width: 960px) {
     width: 520px;
     input {
-      width: 500px;
+      width: 520px;
     }
     textarea {
-      width: 500px;
+      width: 520px;
     }
   }
   @media screen and (max-width: 560px) {
     width: 300px;
     input {
-      width: 280px;
+      width: 300px;
     }
     textarea {
-      width: 280px;
+      width: 300px;
     }
   }
 }

@@ -1,6 +1,11 @@
 // Utils
 @import "./utils/mixins";
 
+* {
+  box-sizing: border-box;
+}
+
+
 :root {
   --color-icons-layout: #202020;
   --border-works: rgb(36, 36, 36);
@@ -43,7 +48,6 @@ html {
   position: relative;
 }
 body {
-  box-sizing: border-box;
   overflow-x: hidden;
   position: relative;
   margin: 0px;
