@@ -16,28 +16,46 @@ const Work = ({ workRef }) => {
 
   const proyectImage1 = useRef(null);
   const proyectImage2 = useRef(null);
+  const proyectImage3 = useRef(null);
+
   const modeProyectAll1 = useRef(null);
   const modeProyectAll2 = useRef(null);
+  const modeProyectAll3 = useRef(null);
+
   const modeProyectAllDes1 = useRef(null);
   const modeProyectAllDes2 = useRef(null);
+  const modeProyectAllDes3 = useRef(null);
+
   const modeProyectAllArray1 = useRef(null);
   const modeProyectAllArray2 = useRef(null);
+  const modeProyectAllArray3 = useRef(null);
+
   const modeProyectAllLink1 = useRef(null);
   const modeProyectAllLink2 = useRef(null);
+  const modeProyectAllLink3 = useRef(null);
 
   useAnimationsScroll(
     [
       h2,
       proyectImage1,
       proyectImage2,
+      proyectImage3,
+
       modeProyectAll1,
       modeProyectAll2,
+      modeProyectAll3,
+
       modeProyectAllDes1,
       modeProyectAllDes2,
+      modeProyectAllDes3,
+
       modeProyectAllArray1,
       modeProyectAllArray2,
+      modeProyectAllArray3,
+
       modeProyectAllLink1,
       modeProyectAllLink2,
+      modeProyectAllLink3,
     ],
     0.5,
     "notAppear"
@@ -59,7 +77,7 @@ const Work = ({ workRef }) => {
             isWebpSupported ? "/images/dogFinder.webp" : "/images/dogFinder.JPG"
           }
           name="Dog Finder"
-          description="Dog Finder es una plataforma web que ayuda a encontrar mascotas perdidas con Inteligencia Artificial."
+          description="Soy fundador de Dog Finder, una plataforma web que ayuda a encontrar mascotas perdidas con Inteligencia Artificial."
           arrayTechnologies={[
             "ReactJS",
             "NodeJS",
@@ -82,10 +100,32 @@ const Work = ({ workRef }) => {
             isWebpSupported ? "/images/bimas-sc.webp" : "/images/bimas-sc.JPG"
           }
           name="BIMAS SC"
-          description="BIMAS SC es una Empresa con la finalidad de ofrecer servicios integrales en temas Ambientales, de Seguridad y Salud."
+          description="Desarrollé la página web de BIMAS SC, una empresa con la finalidad de ofrecer servicios integrales en temas ambientales, de seguridad y salud."
           arrayTechnologies={["NextJS", "SCSS", "ReactJS"]}
           linkToProyect="https://bimas.com.mx/"
           mode="2"
+        ></Proyect>
+        <Proyect
+          proyectImage={proyectImage3}
+          modeProyectAll={modeProyectAll3}
+          modeProyectAllDes={modeProyectAllDes3}
+          modeProyectAllArray={modeProyectAllArray3}
+          modeProyectAllLink={modeProyectAllLink3}
+          imgSrc={
+            isWebpSupported
+              ? "/images/dark-programming.webp"
+              : "/images/dark-programming.png"
+          }
+          name="Lenguaje de programación"
+          description="Desarrollé DARK, un lenguaje de programación que se puede usar desde el navegador. Su sintáxis está inspirada en javascript y python."
+          arrayTechnologies={[
+            "ReactJS",
+            "Moo",
+            "Nearley",
+            "y ...mucho trabajo",
+          ]}
+          linkToProyect="https://dark-language.vercel.app/"
+          mode="1"
         ></Proyect>
       </div>
     </div>
